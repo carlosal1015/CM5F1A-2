@@ -1,0 +1,61 @@
+%! Integrantes:
+%! Andre Gilmer Santos Felix (Matemática)
+%! Leon Alonzo Terrones Caccha (Matemática)
+%! Carlos Alonso Aznarán Laos (Matemática)
+%! Universidad Nacional de Ingeniería
+%! Facultad de Ciencias
+%! Lima, Perú
+%! Uso:
+%! $ sudo pacman -Syu texlive texlive-langspanish minted ttf-fira-code zathura # dependencias, visor. Opcional: ttf-intel-one-mono
+%! $ chmod +x run.sh
+%! $ ./run.sh
+%! Ver https://wiki.archlinux.org/title/TeX_Live
+% arara: clean: {
+% arara: --> extensions:
+% arara: --> ['aux','bbl','bcf','blg','log','nav','out',
+% arara: --> 'pdf','run.xml','snm','synctex.gz','toc']      
+% arara: --> }
+% arara: lualatex: {
+% arara: --> shell: yes,
+% arara: --> draft: yes,
+% arara: --> interaction: batchmode
+% arara: --> }
+% arara: biber
+% arara: lualatex: {
+% arara: --> shell: yes,
+% arara: --> draft: yes,
+% arara: --> interaction: batchmode
+% arara: --> }
+% arara: lualatex: {
+% arara: --> shell: yes,
+% arara: --> synctex: yes,
+% arara: --> interaction: batchmode
+% arara: --> }
+% arara: clean: {
+% arara: --> extensions:
+% arara: --> ['aux','bbl','bcf','blg','log','nav','out',
+% arara: --> 'run.xml','snm','synctex.gz','toc']
+% arara: --> }
+\input{preamble}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+	\frametitle{
+		\color{DarkBlue}
+		Lista de N$^{\circ}$ de pregunta / estudiante
+	}
+	\tableofcontents
+\end{frame}
+
+\input{p5}
+\input{p6}
+\input{p7}
+\input{p8}
+\input{p13}
+\input{p17}
+\input{references}
+
+\end{document}
