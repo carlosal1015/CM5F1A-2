@@ -21,13 +21,26 @@
                       3{\left(x-2\right)}^{3}, & 2 \leq x \leq 3
                   \end{cases}
               \end{math}
-              es el spline cúbico natural que interpola en los puntos
-              $\left(0,1\right)$, $\left(1,1\right)$, $\left(2,0\right)$ y
-              $\left(4,10\right)$.
+              es el \alert{spline cúbico natural} que interpola en
+              los puntos $\left(0,1\right)$, $\left(1,1\right)$,
+              $\left(2,0\right)$ y $\left(3,10\right)$.
     \end{enumerate}
 
     \begin{solution}
-        .
+        Dada una función $S$ definida en
+        \begin{math}
+            \left[
+                0,3
+                \right]
+        \end{math}.
+
+        \begin{math}
+            \forall j\in\left\{0,\dotsc,n-1\right\}:
+            S_{j}\left(x_{j}\right)=
+            f\left(x_{j}\right),
+            S_{j+1}\left(x_{j+1}\right)=
+            f\left(x_{j+1}\right),
+        \end{math}
     \end{solution}
 \end{frame}
 
