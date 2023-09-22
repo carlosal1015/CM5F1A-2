@@ -1,6 +1,6 @@
 \section{Pregunta N$^{\circ}$17\qquad Carlos Alonso Aznarán Laos}
 
-\begin{frame}
+\begin{frame}[fragile]
     \begin{enumerate}\setcounter{enumi}{16}
         \item
 
@@ -31,7 +31,17 @@
     \end{enumerate}
 
     \begin{solution}
-        .
+\begin{verbatim}
+def DFT(x):
+    """ Calculates la transformada discreta de Fourier 1D de un vector.
+    """
+    n = len(x)
+    y = [0]*n
+    omega = np.exp(-2.0j*np.pi/n)
+    for k in range(0,n):
+        y[k] = np.sum(x*omega**(np.arange(0,n)*k))
+    return y
+\end{verbatim}
     \end{solution}
 \end{frame}
 
