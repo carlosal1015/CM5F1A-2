@@ -23,33 +23,55 @@
     \end{enumerate}
 
     \begin{solution}
-        Deseamos obtener un polinomio trigonométrico de la forma:
-        \[S_{2}\left(x\right)=\frac{a_{0}}{2}+a_{2}cos(2x)+a_1cos(x)+b_1sen(x)\]
-        donde:
-        \[a_k=\frac{1}{6}\sum_{j=1}^{11}{y_jcos(kx_j)}\]
-        \[b_k=\frac{1}{6}\sum_{j=1}^{11}{y_jsen(kx_j)}\]
+        Sea el polinomio trigonométrico de grado $2$
+        \begin{equation*}
+            S_{2}\left(x\right)=
+            \dfrac{a_{0}}{2}+
+            a_{2}\cos(2x)+
+            a_{1}\cos\left(x\right)+
+            b_{1}\operatorname{sen}\left(x\right),
+        \end{equation*}
+        donde
+        \begin{align*}
+            a_{k} & =
+            \dfrac{1}{6}
+            \sum_{j=1}^{11}
+            y_{j}\cos\left(kx_{j}\right),\quad
+            \forall k\in\left\{0,\dotsc,n-1\right\} \\
+            b_{k} & =
+            \dfrac{1}{6}
+            \sum_{j=1}^{11}
+            y_{j}
+            \operatorname{sen}\left(kx_{j}\right),\quad
+            \forall k\in\left\{0,\dotsc,n-1\right\}.
+        \end{align*}
     \end{solution}
 \end{frame}
+
 \begin{frame}{Results}
     \begin{figure}
         \centering
-        \includegraphics[width=8]{p7-Aprox-discreta.png}
+        \includegraphics[width=.5\paperwidth]{p7-Aprox-discreta.png}
         \caption{Para $n=2$ y $m=6$}
         \label{fig:enter-label}
     \end{figure}
 \end{frame}
+
 \begin{frame}{Results}
     \begin{figure}
         \centering
-        \includegraphics[width=8]{p7-A-discreta2.png}
+        \includegraphics[width=.5\paperwidth]{p7-A-discreta2.png}
         \caption{Para $n=7$ y $m=16$}
         \label{fig:enter-label}
     \end{figure}
 \end{frame}
-\begin{frame}{Results}
+
+\begin{frame}
+    \frametitle{Results}
+
     \begin{figure}
         \centering
-        \includegraphics[width=8]{p7-A-discreta3.png}
+        \includegraphics[width=.5\paperwidth]{p7-A-discreta3.png}
         \caption{Para $n=15$ y $m=32$}
         \label{fig:enter-label}
     \end{figure}
