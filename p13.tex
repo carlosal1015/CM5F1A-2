@@ -18,51 +18,67 @@
     \end{enumerate}
 
     \begin{solution}
-        Deseamos obtener un polinomio trigonométrico de la forma:
-        \[S_{3}\left(x\right)=\frac{a_{0}}{2}+a_{3}cos(3x)+\sum_{k=1}^{2}{a_kcos(kx)+b_ksen(kx)}\]
-        donde:
-        \[a_k=\frac{1}{\pi}\int_{-\pi}^{\pi}{f(x)cos(kx)}\]
-        \[b_k=\frac{1}{\pi}\int_{-\pi}^{\pi}{f(x)sen(kx)}\]
+        Sea el polinomio trigonométrico de grado $3$
+        \begin{equation*}
+            S_{3}\left(x\right)=
+            \dfrac{a_{0}}{2}+
+            a_{3}\cos\left(3x\right)+
+            \sum_{k=1}^{2}
+            \left[
+                a_{k}\cos\left(kx\right)+
+                b_{k}\operatorname{sen}\left(kx\right)
+                \right],
+        \end{equation*}
+        donde
+        \begin{align*}
+            a_{k} & =
+            \dfrac{1}{\pi}
+            \int\limits_{-\pi}^{\pi}
+            f\left(x\right)\cos\left(kx\right),\quad
+            \forall k\in\left\{0,\dotsc,n\right\} \\
+            b_{k} & =
+            \dfrac{1}{\pi}
+            \int\limits_{-\pi}^{\pi}
+            f\left(x\right)\operatorname{sen}\left(kx\right),\quad
+            \forall k\in\left\{1,\dotsc,n-1\right\}.
+        \end{align*}
     \end{solution}
 \end{frame}
 
 \begin{frame}{Implementación}
     \begin{figure}
         \centering
-        \includegraphics[width=.5\paperwidth]{p13-code1.png}
-        %\caption{Para $n=3$}
-        \label{fig:enter-label}
+        \includegraphics[width=.7\paperwidth]{p13-code1.png}
     \end{figure}
 \end{frame}
+
 \begin{frame}{Implementación}
     \begin{figure}
         \centering
-        \includegraphics[width=.5\paperwidth]{p13-code2.png}
-        %\caption{Para $n=3$}
-        \label{fig:enter-label}
+        \includegraphics[width=.82\paperwidth]{p13-code2.png}
     \end{figure}
 \end{frame}
-\begin{frame}{Results}
+
+\begin{frame}{Resultados}
     \begin{figure}
         \centering
-        \includegraphics[width=.5\paperwidth]{p13-Aprox-continua.png}
+        \includegraphics[width=.75\paperwidth]{p13-Aprox-continua.png}
         \caption{Para $n=3$}
-        \label{fig:enter-label}
     \end{figure}
 \end{frame}
-\begin{frame}{Results}
+
+\begin{frame}{Resultados}
     \begin{figure}
         \centering
-        \includegraphics[width=.5\paperwidth]{p13-A-continua.png}
+        \includegraphics[width=.75\paperwidth]{p13-A-continua.png}
         \caption{Para $n=7$}
-        \label{fig:enter-label}
     \end{figure}
 \end{frame}
-\begin{frame}{Results}
+
+\begin{frame}{Resultados}
     \begin{figure}
         \centering
-        \includegraphics[width=.5\paperwidth]{p13-A-cont3.png}
+        \includegraphics[width=.75\paperwidth]{p13-A-cont3.png}
         \caption{Para $n=11$}
-        \label{fig:enter-label}
     \end{figure}
 \end{frame}
